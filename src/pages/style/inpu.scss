@@ -1,0 +1,45 @@
+.fonc{
+    background-color: rgb(46, 176, 157);
+    height: 1110px;
+}
+.container{
+    max-width: 400px;
+    margin: auto;
+
+    padding-top: 150px;
+
+}
+form{
+    display: flex;
+    flex-direction: column; 
+    // align-items: center;
+    // justify-content: center;
+    gap: 40px;
+    max-width: 400px;
+    .email{
+    max-width: 400px;
+    height: 40px;
+}
+input{
+    width: 100%;
+    height: 25px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    &:focus{
+        outline: none;
+    }
+}
+label{
+
+}
+.passwort{
+    max-width: 400px;
+    height: 40px; 
+}
+.regist{
+    width: 100%;
+    background-color: blue;
+    height: 35px;
+    border: none;
+}
+}

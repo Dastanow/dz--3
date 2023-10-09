@@ -1,0 +1,32 @@
+.Hhome{
+    background-color: aquamarine;
+    height: 1112px;
+}
+.hoMe{
+    // display: flex;
+    // justify-content: center;
+    // max-width: 400px;
+    width: 1120px;
+    margin: 0 auto; 
+    // background-color: aquamarine;
+    .contain{
+        max-width: 400px;
+        // display: flex;l
+        margin: 0 auto;
+        // margin-top: 150px;
+        padding-top: 150px;
+    }
+    .register{
+        background-color: blue;
+        border: none;
+        height: 30px;
+    }
+
+    // display: flex;
+    // max-width: 400px;
+    form{
+        // display: flex;
+        // justify-content: center;
+        // max-width: 400px;
+    }
+}

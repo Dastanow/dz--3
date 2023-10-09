@@ -1,55 +1,23 @@
-import { useState } from "react";  
-import "./App.css";  
+import "./App.scss";  
+import { AususeProvider } from "./context/AsuseContext.js";
+import Home from "./pages/Home";
+import HomePage from "./pages/HomePage";
+import Inpu from "./pages/Inpu";
+import { Routes, Route } from "react-router-dom"; 
   
 function App() {  
-  const [state, setState] = useState("");  
-  const [tasks, setTasks] = useState([]);  
-  
-  const onAddTask = (e) => {  
-    const date = new Date(); 
-    e.preventDefault();  
-    setTasks([  
-      ...tasks,  
-      {  
-        id: date.getMilliseconds(), 
-        value: state,  
-      },  
-    ]);  
-    console.log(tasks); 
-    setState("");  
-  };  
-  const onDelitTask = (id) => { 
-const filterTasc = tasks.filter((el, ) => el.id !== id) 
-setTasks(filterTasc); 
-  } 
-  return (  
-    <div>  
-      <div>  
-        <form onSubmit={onAddTask}>  
-          <input  
-            value={state}  
-            onChange={(event) => setState(event.target.value)}  
-            type="text"  
-            placeholder="type something..."  
-          />  
-          <button onClick={onAddTask}>Add</button>  
-        </form>  
-      </div>  
-  
-      <div>  
-        <ul>  
-          {tasks.map((item, i) => (  
-            <li style={{listStyle: "none" }} key={i}>  
-              <input placeholder={item.value}/> 
-              <button onClick={() => onDelitTask(item.id)}>delete</button> 
-              <button>edit</button>
-            
-            </li>  
-          ))}  
-        </ul>  
-      </div>  
-    </div>  
-  );  
-}  
+ return(
+<div>
+<AususeProvider>
+    <Routes>
+        <Route path="/nomepa" element={<HomePage/>} />
+        <Route path="/inpu" element={<Inpu/>}/>
+        <Route path="/" element={<Home/>}/>
+    </Routes>
+</AususeProvider>
+    </div>
+ )
+}
+
   
 export default App;
